@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .country-item{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr; 
+        gap: 30px;
+
+    }
+
+    /* .subItem{
+        margin-left: 20px;
+    } */
+
+    .bars{
+        height: 30px;
+        width: 350px;
+        display: flex;
+    }
+
+    .bar1{
+        width: 60%;
+        background-color: orange;
+        height: 100%;
+    }
+
+    .bar2{
+        width: 40%;
+        height: 100%;
+        background-color: white;
+    }
+
+
+
+</style>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<body>
+    <div class="container">
+</div>
+</body>
+<script>
+
+    const countriesData = [
+    { name: "China", population: 1444216107 },
+    { name: "India", population: 1393409038 },
+    { name: "United States", population: 331002651 },
+    { name: "Indonesia", population: 273523615 },
+    { name: "Pakistan", population: 220892340 },
+    { name: "Brazil", population: 212559417 },
+    { name: "Nigeria", population: 206139589 },
+    { name: "Bangladesh", population: 164689383 },
+    { name: "Russia", population: 145934462 },
+    { name: "Mexico", population: 128932753 }
+    ];
+
+    const container= document.querySelector(".container")
+    let data= ``;
+
+    let totalPopulation= countriesData.reduce((acc, curr) => acc+curr.population, 0);
+    countriesData.unshift({name: "World", population: totalPopulation});
+
+    countriesData.forEach((country) => {
+        let currPoppulation= (country.population * 100)/totalPopulation;
+        currPoppulation= parseInt(currPoppulation)
+        let remainingPopulation= 100-currPoppulation;
+
+        console.log(currPoppulation, remainingPopulation);
+        data+= `<div class="country-item">
+            <div class="subItem country-item-name">${country.name}</div>
+            <div class="bars">
+                <div class="bar1" style="width: ${currPoppulation}%"}></div>
+                <div class="bar2" style="width: ${remainingPopulation}%"}></div>
+            </div>
+            <div class="subItem country-item-population">${country.population}</div>
+        </div>`
+    })
+    container.innerHTML= data;
+</script>
+</html>
