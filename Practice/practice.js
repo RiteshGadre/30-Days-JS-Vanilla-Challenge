@@ -247,10 +247,433 @@
 
 
 // hex to rgb
-const rgb= (string) => {
-  string.shift();
-  const r= string.substring(0, 2)
-}
+// const rgb= (string) => {
+//   string.shift();
+//   const r= string.substring(0, 2)
+// }
 
-console.log(rgb('#234hhj'));
+// console.log(rgb('#234hhj'));
 
+
+// Scope
+// function abc() {
+//   var num= 12;
+//   {
+//     var num= 25;
+//   }
+//   console.log(num);
+// }
+
+// abc();
+
+// const obj= {
+//   name: undefined,
+//   age: undefined,
+// }
+// console.log(obj);
+
+
+
+
+// Imagine you are getting the above users collection from a MongoDB database. a. 
+// Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+
+
+
+// const users = [
+//   {
+//       _id: 'ab12ex',
+//       username: 'Alex',
+//       email: 'alex@alex.com',
+//       password: '123123',
+//       createdAt:'08/01/2020 9:00 AM',
+//       isLoggedIn: false
+//   },
+//   {
+//       _id: 'fg12cy',
+//       username: 'Asab',
+//       email: 'asab@asab.com',
+//       password: '123456',
+//       createdAt:'08/01/2020 9:30 AM',
+//       isLoggedIn: true
+//   },
+//   {
+//       _id: 'zwf8md',
+//       username: 'Brook',
+//       email: 'brook@brook.com',
+//       password: '123111',
+//       createdAt:'08/01/2020 9:45 AM',
+//       isLoggedIn: true
+//   },
+//   {
+//       _id: 'eefamr',
+//       username: 'Martha',
+//       email: 'martha@martha.com',
+//       password: '123222',
+//       createdAt:'08/01/2020 9:50 AM',
+//       isLoggedIn: false
+//   },
+//   {
+//       _id: 'ghderc',
+//       username: 'Thomas',
+//       email: 'thomas@thomas.com',
+//       password: '123333',
+//       createdAt:'08/01/2020 10:00 AM',
+//       isLoggedIn: false
+//   }
+//   ];
+
+// console.log(users);
+
+// function signUp(){
+//   const newObj= {
+//     _id: 'ab12ex',
+//     username: 'Alex',
+//     email: 'alex@alex.com',
+//     password: '123123',
+//     createdAt:'08/01/2020 9:00 AM',
+//     isLoggedIn: false
+//   }
+//   let ok= 1;
+
+//   for(let user of users){
+//     // console.log(user);
+//     if(user._id === newObj._id){
+//       ok= 0;
+//       break;
+//     }
+//   }
+
+//   if(ok){
+//      users.push(newObj);
+//      console.log("User Detail Pushed");
+//   }
+//   else 
+//     console.log("User already exists");
+
+// }
+
+// // console.log('Hello');
+// signUp();
+
+
+
+// The products array has three elements and each of them has six properties. a.
+//  Create a function called rateProduct which rates the product b. Create a function
+//   called averageRating which calculate the average rating of a product
+
+// const products = [
+//   {
+//     _id: 'eedfcf',
+//     name: 'mobile phone',
+//     description: 'Huawei Honor',
+//     price: 200,
+//     ratings: [
+//       { userId: 'fg12cy', rate: 5 },
+//       { userId: 'zwf8md', rate: 4.5 }
+//     ],
+//     likes: []
+//   },
+//   {
+//     _id: 'aegfal',
+//     name: 'Laptop',
+//     description: 'MacPro: System Darwin',
+//     price: 2500,
+//     ratings: [],
+//     likes: ['fg12cy']
+//   },
+//   {
+//     _id: 'hedfcg',
+//     name: 'TV',
+//     description: 'Smart TV:Procaster',
+//     price: 400,
+//     ratings: [{ userId: 'fg12cy', rate: 5 }],
+//     likes: ['fg12cy']
+//   }
+// ]
+
+// const callback= (n) => n**2;
+
+// function cube(callback, n){
+//   return callback(n)*n;
+// }
+
+// console.log(cube(callback, 3));
+
+
+// const cube= (n) =>{
+//   const square= (n) => {
+//     const number= (n) => {
+//       return n;
+//     }
+//     return number(n)*n;
+//   }
+//   return square(n)*n;
+// }
+// console.log(cube(4));
+
+
+// const numbers= [1,2,3,4,5,6];
+// const sum= (numbers) => {
+//   let add= 0;
+//   numbers.forEach(element => {
+//     add+= element;
+//   });
+//   return add;
+// }
+// console.log(sum(numbers));
+
+
+// function sayHello(){
+//   console.log("Hello");
+// }
+
+// setTimeout(sayHello, 2000);
+
+
+
+// const nums= [1, 2, 3, 4, 5, 6, 7, 8];
+// nums.forEach(function(ele, i){
+//   console.log(i);
+//   console.log(ele);
+// })
+
+// const square= nums.map(function(num){
+//   return num*num;
+// })
+// console.log(square);
+
+// const cube= nums.map((n)=> n**3);
+// console.log(cube);
+
+// const even= nums.filter((n) => n%2==0);
+// console.log(even);
+
+// const sum= nums.reduce((curr, acc) => curr+acc, 0);
+// console.log(sum);
+
+
+// function square(n){
+//     return n*n;
+// }
+
+// function cube(square, n){
+//     return 
+// }
+
+// const numbers= [1,2,3,4,5,6,7,8];
+// let sum= numbers.map((num) => {
+//     return num
+// })
+
+// console.log(isNaN);
+
+// const nums= [1, 3, 4, 5, 6, 7, 7];
+// function findMax(acc, curr){
+//     return (acc > curr ? acc : curr);
+// }
+// const result= nums.reduce(findMax);
+
+// const evenSum= nums.filter(num => num%2).reduce((acc, curr) => acc+curr);
+// console.log(evenSum);
+// // console.log(result);
+
+
+
+    // const list= [
+    //     {fName: "Ritesh", lName: "Gadre", age: 25},
+    //     {fName: "Swapnil", lName: "Shelake", age: 25},
+    //     {fName: "Akash", lName: "Bharati", age: 25}
+    // ]
+
+    // const result= list.map((obj)=>{
+    //     return obj.fName+ " " + obj.lName;
+    // });
+
+    // console.log()
+    // console.log(result);
+
+    // const s= new Set([1, 2, 3, 4, 5, 6, 6]);
+    // s.add(7);
+    // console.log(s.has(9));
+
+    // const s= new Set();
+    // for(let i=0; i<10; i++) s.add(i);
+    // console.log(s);
+
+    // const set1= new Set([1, 2, 3, 4, 5]);
+    // const set2= new Set([2, 3, 4, 5, 6]);
+    // const set3= new Set([...set1, ...set2]);
+    // const set4= new Set([...set1].filter(ele => set2.has(ele)));
+
+    
+    // for(const ele of set1){
+    //     if(set2.has(ele)){
+    //         set4.add(ele);
+    //     }
+    // }
+
+    // console.log(set3);
+    // console.log(set4);
+
+
+    // const obj= {
+    //     name: "aksh",
+    //     age: 34
+    // }
+
+    // const [name, age]= Object.keys(obj);
+    // console.log(age);
+
+
+    // const person= [
+    //     {name: "Ritesh", age: 25, isMArried: false},
+    //     {name: "Akash", age: 25, isMArried: false},
+    //     {name: "Yogesh", age: 25, isMArried: false},
+    //     {name: "Sharad", age: 25, isMArried: false}
+    // ]
+
+    // for(const {name, age, isMArried} of person){
+    //     console.log(name, age, isMArried);
+    // }
+
+    // person.forEach(({name, age, isMArried}) => {
+    //     console.log(name, age, isMArried);
+    // })
+
+    // const 
+
+    // try {
+    //     let lastName = 'Yetayeh'
+    //     // let fistName = 'fglm'
+    //     let fullName = fistName + ' ' + lastName
+    //     console.log(fullName);
+    //   } catch (err) {
+    //     console.log(err)
+    //   }
+
+
+    // class Person {
+
+    //     constructor(fname, lname, age, country, city) {
+      
+    //       this.fname = fname
+    //       this.lastname = lname
+    //       this.age = age
+    //       this.country = country
+    //       this.city = city
+    //       this.score = 10
+    //     }
+      
+    //     get getScore(){
+    //       return this.score
+    //     }
+
+    //     get getName(){
+    //         return this.fname;
+    //     }
+
+    //     set setName (name){
+    //       this.fname= name;
+    //     }
+    //   };
+      
+    //   const person1 = new Person("Ritesh", "Shelke", 22, "elkgm", "alfkg");
+    //   console.log(person1);
+    //   person1.setName= "Akash";
+    //   console.log(person1.getName);
+      
+    //   person1.setName("sachin")
+    //   console.log(person1.getName());
+
+
+    // class Animal{
+    //     constructor(canEat, canDrink, canFuck){
+    //         this.canEat= canEat;
+    //         this.canDrink= canDrink;
+    //         this.canFuck= canFuck;
+    //     }
+
+    //     set setDrink(drink){
+    //         this.canDrink= drink;
+    //     }
+    // }
+
+    // class Cat extends Animal{
+    //     constructor(canEat, canDrink, canFuck, name){
+    //         super(canEat, canDrink, canFuck)
+    //         this.name= name;
+    //     }
+
+    //     set setDrink(drink){
+    //         this.canDrink= drink;
+    //     }
+    // }
+
+    // const c1= new Cat(true, true, true, "Cat");
+    // c1.name= "Ali";
+    // c1.name= "Madarchod"
+    // c1.setDrink= 0;
+    // console.log(c1);
+
+
+    // class Statistics{
+    //     constructor(numbers){
+
+    //         for(let i=0; i<numbers.length; i++){
+    //             this.numbers[i]= numbers[i];
+    //         }
+    //     }
+
+    //     sum(){
+    //         const result= numbers.reduce((acc, curr){
+    //             return acc+curr;
+    //         }, 0)
+    //         return result;
+    //     }
+    // }
+
+    // const numbers= [1,2,3,4,5,6,7,8,9];
+    // const stat= new Statistics
+    // console.log(Statistics.sum());
+
+
+
+    // const skills= ['HTML', 'CSS', 'JS   ']
+
+
+// const url = '://restcountries.com/v2/all'
+// fetch(url)
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data);
+// }).catch(err => {
+//     console.log("error:" + err);
+// })
+
+
+const countriesAPI = 'https://restcountries.com/v2/all'
+const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+
+// fetch(countriesAPI)
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data);
+// })
+// .then(err => {
+//     console.log('Error: ' + err);
+// })
+
+
+// const fetchData= async () => {
+//     try{
+//         const response= await fetch(countriesAPI);
+//         const countries= await response.json();
+//         console.log(countries);
+//     }
+//     catch(err){
+//         console.log('error:' + err);
+//     }
+// } 
+
+// setTimeout(fetchData, 2000);
